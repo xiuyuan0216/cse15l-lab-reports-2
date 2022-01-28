@@ -33,7 +33,7 @@
 
 >By adding an extra if statement, we exclude the possibility of EmptyStackException, as when the stack is empty, it breaks the for loop. 
 
-# 3. Solving the Problem of Not Instantiating Varaible
+# 3. Solving the Problem of Not Instantiating Variable
 
 >During the lab, to deal with many test methods, we try to use @Before and setUp() method to instantiate all the variables. However, cannot find symbol occurs when we use command line to run the test program. 
 
