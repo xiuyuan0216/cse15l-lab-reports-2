@@ -32,3 +32,17 @@
 <br>
 
 >By adding an extra if statement, we exclude the possibility of EmptyStackException, as when the stack is empty, it breaks the for loop. 
+
+# 3. Solving the Problem of Not Instantiating Varaible
+
+>During the lab, to deal with many test methods, we try to use @Before and setUp() method to instantiate all the variables. However, cannot find symbol occurs when we use command line to run the test program. 
+
+<img src = "0A8B32FB-3F47-43BC-A2B6-61FF86CBE98A_1_105_c.jpeg" width = "500" height = "300">
+<br>
+
+>The error occurs because we put the instantiation of variables inside the @Before method. Actually, @Before annotation only functions in runtime, so the Java static checker can't find the variables and gives cannot find symbol error. The following pictures are code changes and correct output. 
+
+<img src = "950AB1D3-5D67-43B5-A393-8BCCE647729F.jpeg" width = "500" height = "300">
+<img src = "CE9839A8-B661-40F1-AC96-E578B49165FC_1_105_c.jpeg" width = "500" height = "300">
+
+>We solve this bug by putting the variable as class field and instantiate in @Before method. Here is the [link](MarkdownParseTest.java) for revised test file. 
